@@ -1,0 +1,38 @@
+.knowledgeText{
+    background:#06113C;
+    color:white;
+    padding:50px 30px;
+    height:450px;
+}
+.knowledgeText:hover{
+    color:white;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    background: black
+}
+.knowledgeTitle{
+    color:#06113C;
+    
+}
+.knowledgeImg img{
+    width:100%;
+    height:300px;
+}
+
+@media only screen and (max-width:768px){
+    .knowledgeImg{
+        width:30%;
+        height:250px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: black;
+    }
+  }
