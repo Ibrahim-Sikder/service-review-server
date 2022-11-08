@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { Link} from 'react-router-dom';
+import './Login.css';
 import { AuthContext } from '../../context/AuthProvider';
 import img from '../../image/login3.jpg'
 
 
 
 const Login = () => {
-    const {login} = useContext(AuthContext)
+    const {login, GoogleLogin} = useContext(AuthContext)
   
       const handleLogin = (event) =>{
           event.preventDefault()
@@ -23,10 +24,16 @@ const Login = () => {
           .catch(err=>{
             console.error('error', err)
           })
-            
-          
-          
-        
+
+          GoogleLogin()
+          .then(result=>{
+            const user = result.user ;
+            console.log(user);
+          })
+          .catch(err=>{
+            console.error('error', err)
+          })
+ 
       }
   
 
@@ -55,8 +62,8 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-            <input className="btn btn-primary" type="submit" value="Login" />
-            
+            <input className="btn btnBg" type="submit" value="Login" />
+            <button className="btn btnBg mt-3">Login With Google</button>
           
         </div>
       </form>
