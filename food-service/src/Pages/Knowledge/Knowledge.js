@@ -8,10 +8,10 @@ const Knowledge = () => {
         <div className='p-5'>
            <div className='text-center pt-20 pb-10'>
            <p> Our Blog Content</p>
-            <h2 className='text-5xl knowledgeTitle font-bold leading-16'>Lets get new knowledge from <br /> our tips and tricks</h2>
+            <h2 className='text-5xl sm:text-3xl knowledgeTitle font-bold leading-16'>Lets get new knowledge from <br /> our tips and tricks</h2>
            </div>
-           <div className='flex sm:flex-none'>
-           <div className='w-2/6 mr-3 md:w-2/5 sm:w-full knowledgeImg'>
+           <div className='grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-2.5'>
+           <div className=' knowledgeImg'>
                 <div>
                     <img src={img} alt="" />
                     <div className='knowledgeText'>
@@ -23,7 +23,7 @@ const Knowledge = () => {
                     </div>
                 </div>
            </div>
-           <div className='w-2/6 mr-3 md:w-2/5 sm:w-full knowledgeImg'>
+           <div className=' knowledgeImg'>
                 <div>
                     <img src={img1} alt="" />
                     <div className='knowledgeText'>
@@ -35,7 +35,7 @@ const Knowledge = () => {
                     </div>
                 </div>
            </div>
-           <div className='w-2/6 mr-3 md:w-2/5 sm:w-full knowledgeImg'>
+           <div className=' knowledgeImg'>
                 <div>
                     <img src={img2} alt="" />
                     <div className='knowledgeText'>

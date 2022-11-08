@@ -15,24 +15,5 @@
 }
 .knowledgeTitle{
     color:#06113C;
-    
-}
-.knowledgeImg img{
-    width:100%;
-    height:300px;
-}
-
-@media only screen and (max-width:768px){
-    .knowledgeImg{
-        width:30%;
-        height:250px;
-    }
-    
 
 }
-
-@media only screen and (max-width: 700px) {
-    body {
-      background-color: black;
-    }
-  }

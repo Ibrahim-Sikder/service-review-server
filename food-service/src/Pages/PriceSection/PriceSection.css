@@ -1,0 +1,42 @@
+.simplePrice{
+    background:#F3F3F3;
+    padding:50px 20px;
+    position: relative;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.simplePrice:hover{
+    background:#06113C;
+    color:white;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.price{
+    background-color: #DDDDDD;
+    padding:10px 20px;
+    width:100% !important;
+    position:absolute;
+    left:0;
+    color:#FF8C32;
+
+}
+.selected{
+    background:#06113C;
+    padding:60px 20px;
+    color:white;
+}
+.selected:hover{
+    background:white;
+    color:black;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
