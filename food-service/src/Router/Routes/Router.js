@@ -4,7 +4,10 @@ import Main from '../../layout/Main';
 import Blog from '../../Pages/Blog/Blog';
 import Home from '../../Pages/Home/Home';
 import Login from '../../Pages/Login/Login';
+import Review from '../../Pages/Review/Review';
+import Service from '../../Pages/Services/Service';
 import SignUp from '../../Pages/SingUp/SingUp';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
   const router = createBrowserRouter([
     {
@@ -20,6 +23,10 @@ import SignUp from '../../Pages/SingUp/SingUp';
             element:<Home></Home>
         },
         {
+          path:'/review',
+          element: <PrivateRoute><Review></Review></PrivateRoute>
+        },
+        {
           path: '/login',
           element: <Login></Login>
         },
@@ -30,6 +37,10 @@ import SignUp from '../../Pages/SingUp/SingUp';
         {
           path:'/blog',
           element: <Blog></Blog>
+        },
+        {
+          path:'/service',
+          element: <Service></Service>
         }
        
         
