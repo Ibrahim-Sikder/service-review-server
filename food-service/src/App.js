@@ -8,7 +8,6 @@ function App() {
   return (
     <div data-theme="light">
      <RouterProvider router={router}>
-
      </RouterProvider>
     </div>
   );
