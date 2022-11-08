@@ -21,7 +21,7 @@ const Header = () => {
                 user?.email ?
                <> 
                 <Link className='btn btn-ghost normal-case text-xl' to="/review">MY Reviews</Link>
-                <Link className='btn btn-ghost normal-case text-xl' to="/service">Add Service </Link>
+                <Link className='btn btn-ghost normal-case text-xl' to="/">Add Service </Link>
                 <Link className='btn btn-ghost normal-case text-xl' onClick={handleLogOut}>Log Out </Link>
                </>
                 :
