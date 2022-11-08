@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Header.css';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-primary text-primary-content">
+            <div className="navbar navBarBg text-primary-content">
             <Link className='btn btn-ghost normal-case text-xl' to="/">Food Service</Link>
            <Link className='btn btn-ghost normal-case text-xl' to="/home">Home</Link>
             <Link className='btn btn-ghost normal-case text-xl' to="/review">MY reviews</Link>
