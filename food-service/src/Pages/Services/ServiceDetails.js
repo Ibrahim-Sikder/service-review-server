@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import './Service.css';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthProvider';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthProvider';
 
 const ServiceDetails = ({service}) => {
-    const {user} = useContext(AuthContext)
+const {user} = useContext(AuthContext)
     const {_id, img, title, price, description, ratting } = service;
     return (
-        <div>
+        <div className='mb-28'>
            <div className="card mx-auto w-96 bg-base-100 shadow-xl">
         <figure>
             <PhotoProvider>
@@ -22,19 +23,24 @@ const ServiceDetails = ({service}) => {
             <span className='text-yellow-500 text-3xl font-bold'>{ratting}*</span>
             <p>{description}</p>
             <div className="card-actions justify-end">
-            <strong className='absolute left-10 bottom-10'>{price}</strong>
-            <Link to={`/service/${_id}`}>
-           {
-                user?.email ?
-                <button className="btn btn-primary">View Details</button>
-                :
-                <button className="btn btn-warning">See All</button>
-                
-           }
+            <strong className='absolute left-10 bottom-3 '>{price}</strong>
+            <Link to={`/service/${_id}`}>   
+                {
+                    user?.email &&
+                    <button className="btn btn-warning">View Details</button>
+                   
+                }
             </Link>
             </div>
+            
         </div>
+        
         </div>
+       <div className="text-center">
+      <Link to="/service">
+      <button className="btn btn-warning text-white serviceBtn font-bold">See All</button>
+      </Link>
+       </div>
         </div>
     );
 };

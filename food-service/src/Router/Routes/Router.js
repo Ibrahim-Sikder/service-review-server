@@ -4,10 +4,12 @@ import Main from '../../layout/Main';
 import Blog from '../../Pages/Blog/Blog';
 import Home from '../../Pages/Home/Home';
 import Login from '../../Pages/Login/Login';
-import Review from '../../Pages/Review/Review';
 import Service from '../../Pages/Services/Service';
+import DisplayServiceDetails from '../../Pages/Services/DisplayServiceDetails';
 import SignUp from '../../Pages/SingUp/SingUp';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import AddService from '../../Pages/AddService/AddService';
+import Reviews from '../../Pages/Reviews/Reviews';
 
   const router = createBrowserRouter([
     {
@@ -22,10 +24,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
             path: '/home',
             element:<Home></Home>
         },
-        {
-          path:'/review',
-          element: <PrivateRoute><Review></Review></PrivateRoute>
-        },
+       
         {
           path: '/login',
           element: <Login></Login>
@@ -39,8 +38,21 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
           element: <Blog></Blog>
         },
         {
+          path:'/review',
+          element: <PrivateRoute><Reviews></Reviews></PrivateRoute>
+        },
+        {
+          path: '/addservice',
+          element: <PrivateRoute><AddService></AddService></PrivateRoute>
+        },
+        {
+          path:'/service',
+          element:<Service></Service>
+
+        },
+        {
           path:'/service/:id',
-          element: <PrivateRoute><Service></Service></PrivateRoute>,
+          element: <PrivateRoute><DisplayServiceDetails></DisplayServiceDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         }
        
