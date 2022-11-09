@@ -21,7 +21,7 @@ const {user} = useContext(AuthContext)
         <div className="card-body">
             <h2 className="card-title">{title}</h2>
             <span className='text-yellow-500 text-3xl font-bold'>{ratting}*</span>
-            <p>{description}</p>
+            <p>{`${description.slice(0, 300)} ` + '...'}</p>
             <div className="card-actions justify-end">
             <strong className='absolute left-10 bottom-3 '>{price}</strong>
             <Link to={`/service/${_id}`}>   

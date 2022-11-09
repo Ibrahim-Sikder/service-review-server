@@ -29,16 +29,17 @@ const {login, GoogleLogin} = useContext(AuthContext)
             console.error('error', err)
           })
 
-          GoogleLogin()
-          .then(result=>{
-            const user = result.user ;
-            console.log(user);
-          })
-          .catch(err=>{
-            console.error('error', err)
-          })
+       
  
       }
+      GoogleLogin()
+      .then(result=>{
+        const user = result.user ;
+        console.log(user);
+      })
+      .catch(err=>{
+        console.error('error', err)
+      })
   
 
     return (
@@ -67,10 +68,11 @@ const {login, GoogleLogin} = useContext(AuthContext)
         </div>
         <div className="form-control mt-6">
             <input className="btn btnBg" type="submit" value="Login" />
-            <button className="btn btnBg mt-3">Login With Google</button>
+           
           
         </div>
       </form>
+      <button className="btn btnBg mt-3" onClick={GoogleLogin}>Login With Google</button>
       <p className='text-red-800 font-bold text-center'>New to Genius Car <Link to="/signup">Acount</Link> </p>
      
     </div>

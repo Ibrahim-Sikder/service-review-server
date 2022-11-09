@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {useContext} from 'react';
 import { AuthContext } from '../../context/AuthProvider';
 import img from '../../image/login.jpg';
 
 const SignUp = () => {
 const {createUser} = useContext(AuthContext)
+
     const handleSignUp = (event) =>{
         event.preventDefault()
         const form = event.target ;
@@ -16,6 +17,7 @@ const {createUser} = useContext(AuthContext)
         .then(result =>{
             const user = result.user ;
             console.log(user)
+            
 
         })
         .catch(err=>{
@@ -57,7 +59,7 @@ const {createUser} = useContext(AuthContext)
           
         </div>
       </form>
-      <p className='text-red-800 font-bold text-center'>All ready have an account <Link to="/login">Login</Link> </p>
+      <p className='text-red-800 font-bold text-center'>All ready have an account <Link to="/login">Sing UP</Link> </p>
     </div>
   </div>
 </div>
