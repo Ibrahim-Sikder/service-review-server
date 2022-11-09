@@ -23,7 +23,7 @@ const googleAuthProvider = new GoogleAuthProvider();
         return signOut(auth)
      }
 
-     const GoogleLogin = () =>{
+     const GoogleLogin = (email, password) =>{
         return signInWithPopup(auth, googleAuthProvider)
      }
      useEffect(()=>{

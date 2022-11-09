@@ -3,16 +3,19 @@ import { Link, useLocation, useNavigate} from 'react-router-dom';
 import './Login.css';
 import { AuthContext } from '../../context/AuthProvider';
 import img from '../../image/login3.jpg'
+import useTitle from '../../hooks/UseTitle';
 
 
 
 const Login = () => {
+  useTitle('Login')
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/'
 const {login, GoogleLogin} = useContext(AuthContext)
 
  const handleLogin = (event) =>{
+      
           event.preventDefault()
           const form = event.target ;
           const email = form.email.value ;
@@ -68,11 +71,11 @@ const {login, GoogleLogin} = useContext(AuthContext)
         </div>
         <div className="form-control mt-6">
             <input className="btn btnBg" type="submit" value="Login" />
-           
+            <button className="btn btnBg mt-3" onClick={GoogleLogin}>Login With Google</button>
           
         </div>
       </form>
-      <button className="btn btnBg mt-3" onClick={GoogleLogin}>Login With Google</button>
+    
       <p className='text-red-800 font-bold text-center'>New to Genius Car <Link to="/signup">Acount</Link> </p>
      
     </div>

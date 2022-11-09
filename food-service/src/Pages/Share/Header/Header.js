@@ -22,7 +22,7 @@ const Header = () => {
                <> 
                 <Link className='btn btn-ghost normal-case text-xl' to="/review">MY Reviews</Link>
                 <Link className='btn btn-ghost normal-case text-xl' to="/addservice">Add Service </Link>
-                <Link className='btn btn-ghost normal-case text-xl' onClick={handleLogOut}>Log Out </Link>
+                <Link className='btn btn-ghost normal-case text-xl' onClick={()=>{handleLogOut()}}>Log Out </Link>
                </>
                 :
                 <Link className='btn btn-ghost normal-case text-xl' to="/login">Login </Link>
