@@ -2,13 +2,18 @@ import React from 'react';
 import './Choos.css';
 const Choose = () => {
     return (
-        <div>
+        <div className='mt-20'>
+          <div className='text-center w-50 mb-10'>
+            <h2 className='text-3xl'>Why choose my food</h2>
+            <p >You choose for me because my food is very health & diet.I make my food very clean, fresh & healthy.</p>
+          </div>
+
            <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center choosText lg:text-left w-2/4">
         <p className='text-2xl mb-5'>Our professionals</p>
       <h1 className='text-5xl mb-5'>
-      We have professionals <br />
+      I have professionals <br />
        healthy food cooking & <br /> diet consultant
       </h1>
       <p className='text-2xl'>

@@ -1,3 +1,19 @@
+#live website link : https://food-service-cb0bf.web.app/home
+# server side github code link : https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Ibrahim-Sikder
+### client side github code link : https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Ibrahim-Sikder/tree/main/food-service
+
+### Which use for my project functionalities
+1. MongoDb database 
+2. Node js
+3. Firebase authentication
+4. Tailwind css framework
+5. React-router-dom
+6. Spinner
+7. React-photo-view
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
