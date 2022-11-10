@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
+import ReviewRow from './ReviewRow/ReviewRow';
 
 
 
@@ -9,7 +10,7 @@ const Reviews = () => {
   useEffect(()=>{
     fetch(`https://b6a11-service-review-server-side-ibrahim-sikder.vercel.app/review?email${user.email}`,{
       headers: {
-        authorization: `Bearer ${localStorage.getItem('genius-token')}`
+        authorization: `Bearer ${localStorage.getItem('foodServiceToken')}`
     }
 
 
@@ -22,6 +23,26 @@ const Reviews = () => {
     })
     .then(data=>setReview(data))
 },[user?.email])
+
+// delete 
+const handleDelete =id => {
+  const proceed = window.confirm('Are you sure you want to delete!! ')
+  if(proceed){
+      fetch(`https://b6a11-service-review-server-side-ibrahim-sikder.vercel.app/review${id}`, {
+          method: 'DELETE'
+
+      })
+      .then(res=>res.json())
+      .then(data=>{
+          console.log(data);
+          if(data.deletedCount > 0 ){
+              alert("Deleted successfully ");
+              const remaining = reviews.filter(odr=>odr._id !== id);
+              setReview(remaining)
+          }
+      })
+  }
+}
 
     return (
       <div>
@@ -43,7 +64,13 @@ const Reviews = () => {
         </tr>
       </thead>
       <tbody>
-  
+        {
+          reviews.map(review=> <ReviewRow
+          key={review._id}
+          rev={review}
+          handleDelete={handleDelete}
+          ></ReviewRow>)
+        }
       
       </tbody>
       

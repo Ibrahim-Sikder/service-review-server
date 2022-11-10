@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <div>
             <div className="navbar navBarBg text-primary-content">
-            <Link className='btn btn-ghost normal-case text-3xl' to="/">Delivery Food</Link>
+            <Link className='btn btn-ghost normal-case text-3xl' to="/">Fast and Yummy</Link>
            <Link className='btn btn-ghost normal-case text-xl' to="/home">Home</Link>
            <Link className='btn btn-ghost normal-case text-xl' to="/blog">Blog </Link>
            
