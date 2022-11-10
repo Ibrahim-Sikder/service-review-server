@@ -6,7 +6,7 @@ import './Knowledge.css';
 const Knowledge = () => {
     return (
         <div className='p-5'>
-           <div className='text-center pt-20 pb-10'>
+           <div className='text-center pt-5 pb-10'>
            <p> Our Blog Content</p>
             <h2 className='text-5xl sm:text-3xl knowledgeTitle font-bold leading-16'>Lets get new knowledge from <br /> our tips and tricks</h2>
            </div>

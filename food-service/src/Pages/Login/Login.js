@@ -26,7 +26,30 @@ const {login, GoogleLogin} = useContext(AuthContext)
           .then(result=>{
             const user = result.user;
             console.log(user);
+            const currentUser = {
+              email: user.email 
+            }
+            console.log(currentUser)
+
+            // get jwt 
+            fetch('https://b6a11-service-review-server-side-ibrahim-sikder.vercel.app/', {
+              method: 'POST',
+              headers:{
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(currentUser)
+
+            })
+            .then(res=> res.json())
+            .then(data=>{
+              console.log(data)
+              localStorage.setItem('foodServiceToken', data.token)
+              event.target.reset();
             navigate(from, {replace: true});
+            });
+
+
+            
           })
           .catch(err=>{
             console.error('error', err)
@@ -71,11 +94,11 @@ const {login, GoogleLogin} = useContext(AuthContext)
         </div>
         <div className="form-control mt-6">
             <input className="btn btnBg" type="submit" value="Login" />
-            <button className="btn btnBg mt-3" onClick={GoogleLogin}>Login With Google</button>
+         
           
         </div>
       </form>
-    
+      <button className="btn btnBg mt-3" onClick={GoogleLogin}>Login With Google</button>
       <p className='text-red-800 font-bold text-center'>New to Genius Car <Link to="/signup">Acount</Link> </p>
      
     </div>

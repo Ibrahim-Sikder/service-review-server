@@ -1,0 +1,7 @@
+.inputGroup input{
+    width:800px;
+    margin-bottom:10px;
+}
+.inputGroup textarea{
+    width:100%;
+}

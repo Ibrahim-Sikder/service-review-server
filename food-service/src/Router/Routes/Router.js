@@ -53,7 +53,7 @@ import Reviews from '../../Pages/Reviews/Reviews';
         {
           path:'/service/:id',
           element: <PrivateRoute><DisplayServiceDetails></DisplayServiceDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({params}) => fetch(`https://b6a11-service-review-server-side-ibrahim-sikder.vercel.app/services/${params.id}`)
         }
        
         
